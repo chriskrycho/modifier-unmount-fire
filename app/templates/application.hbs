@@ -1,3 +1,7 @@
-<h2 id="title">Welcome to Ember</h2>
+<h2>fn and modifier</h2>
 
-{{outlet}}
+<button {{on "click" this.reset}}>reset timer</button>
+
+{{#if this.record.data}}
+  <div {{when-unmount (fn this.alertIt this.record.data)}}>showing...</div>
+{{/if}}
